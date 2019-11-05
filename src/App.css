@@ -1,10 +1,169 @@
+
+:root {
+  --primaryColor: #af9a7d;
+  --secondaryColor: #ccac6d;
+  --goldenBrown:rgb(250, 214, 9);
+  --greatBlue:rgb(51, 85, 153);
+  --red: #ff510094;
+  --silverGrey :rgb(103, 241 241);
+  --offWhite:#ededede8;
+  --mainWhite: #fff;
+  --mainBlack:rgb(0,0,0) ;
+  --middleGrey: #dbd5d5d8;
+  --lightGrey: #ebe7e7;
+  --darkGrey: #cfcfcf83;
+  --mainTransition: a ll 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+  --bs:0 4px 8px 0 rgba(0,0,0,0.4);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+/* globals */
+body {
+  /* padding-top: 66px; */
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+.btn-primary {
+display: inline-block;
+width:150px;
+align-content: center;
+text-decoration: none;
+letter-spacing: var(--mainSpacing);
+color: var(--mainBlack);
+background: var(--primaryColor);
+padding: 0.2rem;
+border: 2px solid var(--primaryColor);
+transition: var(--mainTransition);
+text-transform: capitalize;
+cursor: pointer;
+border-radius:10px ;
+-webkit-border-radius:10px ;
+-moz-border-radius:10px ;
+-ms-border-radius:10px ;
+-o-border-radius:10px ;
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+
+li:focus-within a {
+outline: none;
 }
+
+ul li ul {
+  /* background: rgba(19, 223, 104, 0.726); */
+  visibility: hidden;
+opacity: .5;
+/* min-width: 2rem; */
+  position: absolute;
+transition: all 0.5s ease;
+margin-top: .4rem;
+  left: 0;
+display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+ visibility: visible;
+ opacity: .6;
+ display: block;
+}
+
+ul li ul li {
+  clear: both;
+width: 100%;
+}
+
+
+.img-container {
+  position: relative;
+}
+.img-container img {
+  width: 100%;
+  display: block;
+  transition: var(--mainTransition);
+}
+.price-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(122, 118, 118, 0.8);
+  color: var(--mainWhite);
+  padding: 0.3rem 0.6rem 0.5rem;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: .8rem;
+  font-weight:400 ;
+  text-align: center;
+  transition: var(--mainTransition);
+}
+.price-top h6 {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: var(--mainSpacing);
+}
+.room-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(0);
+  transition: all 0.3s linear;
+}
+.img-container:hover {
+  cursor:pointer;
+}
+.room-info {
+  /* background: var(--darkGrey); */
+  background:  rgba(122, 118, 118, 0.8);
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: var(--mainSpacing);
+}
+
+
 
 .App-header {
   background-color: #282c34;
@@ -16,6 +175,58 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+/* Style The Dropdown Button */
+.dropbtn {
+  /* background-color: #4CAF50; */
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width:125px;
+  padding:20px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  align-items: center;
+  /* background-color: #f0c6c6; */
+  /* min-width: 160px; */
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
+  /* z-index: 1;s */
+ }
+
+/* Links inside the dropdown */
+.dropdown-content 
+a {
+  color: black;
+  /* padding: 12px 16px; */
+  text-decoration: none;
+  /* display: block; */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
 
 .App-link {
   color: #09d3ac;
