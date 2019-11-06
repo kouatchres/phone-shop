@@ -12,7 +12,7 @@
   --middleGrey: #dbd5d5d8;
   --lightGrey: #ebe7e7;
   --darkGrey: #cfcfcf83;
-  --mainTransition: a ll 0.3s linear;
+  --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
   --lightShadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
   --bs:0 4px 8px 0 rgba(0,0,0,0.4);
@@ -115,26 +115,22 @@ width: 100%;
 }
 
 
-.img-container {
-  position: relative;
-}
-.img-container img {
-  width: 100%;
-  display: block;
-  transition: var(--mainTransition);
-}
 .price-top {
   position: absolute;
   top: 0;
   left: 0;
   background: rgba(122, 118, 118, 0.8);
   color: var(--mainWhite);
-  padding: 0.3rem 0.6rem 0.5rem;
+  padding: 0.1rem 0.1rem ;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
-  font-size: .8rem;
+  font-size: 1.2rem;
   font-weight:400 ;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  width:50px;
+  /* height:40px; */
   transition: var(--mainTransition);
 }
 .price-top h6 {
@@ -150,16 +146,14 @@ width: 100%;
   transform: scale(0);
   transition: all 0.3s linear;
 }
-.img-container:hover {
-  cursor:pointer;
-}
 .room-info {
-  /* background: var(--darkGrey); */
   background:  rgba(122, 118, 118, 0.8);
   text-transform: capitalize;
-  padding: 0.5rem 0;
+  padding:0;
+  height:50px;
   text-align: center;
   font-weight: 700;
+  border-top: solid 1px black;
   letter-spacing: var(--mainSpacing);
 }
 
@@ -186,7 +180,6 @@ width: 100%;
   cursor: pointer;
   
 }
-
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;

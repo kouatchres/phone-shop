@@ -3,12 +3,13 @@ import styled from 'styled-components'
 
 const SectionTitle = styled.div`
            text-align: center;
-              margin-bottom: 4rem;
+              margin-bottom: .5rem;
+              margin-top: .5rem;
     h4{
               font-size: 2rem;
               letter-spacing: var(--mainSpacing);
               text-transform: capitalize;
-              margin-bottom: 1rem;
+              margin-bottom: .2rem;
 
     }
 `;
