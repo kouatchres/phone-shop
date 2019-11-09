@@ -36,7 +36,10 @@ class Product extends Component {
                             <button 
                             className="cart-btn"
                             disabled={inCart ? true: false} 
-                            onClick={()=>{value.addToCart(id)}}  >
+                            onClick={()=>{
+                                value.addToCart(id);
+                                value.openModal(id);
+                                }}  >
         {inCart ? (<p disabled>In Cart</p>) : (<p>Add To Cart</p>)}
                             </button>
                             <p className="room-info">
@@ -52,9 +55,9 @@ class Product extends Component {
 }
 
 const EachRoom = styled.article `
- border-radius:20px;
+ border-radius:0.7rem;
  background:var(--mainWhite);
- /* height:465px; */
+ height:23.78rem;
 
  .img-container{
     position: relative;
@@ -73,8 +76,8 @@ const EachRoom = styled.article `
         
     }
     p{
-        border-bottom-left-radius:10px;
-        border-bottom-right-radius:10px;
+        border-bottom-left-radius: 0.7rem ;
+        border-bottom-right-radius:0.7rem;
     }
     
     .img-container:hover .cart-btn{

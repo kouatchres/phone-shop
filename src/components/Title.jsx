@@ -4,9 +4,9 @@ import styled from 'styled-components'
 const SectionTitle = styled.div`
            text-align: center;
               margin-bottom: .5rem;
-              margin-top: .5rem;
+              margin-top: .01rem;
     h4{
-              font-size: 2rem;
+              font-size: 1.5rem;
               letter-spacing: var(--mainSpacing);
               text-transform: capitalize;
               margin-bottom: .2rem;

@@ -13,7 +13,7 @@ export const storedProducts = [
                 "S, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic as" +
                 "ymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical hel" +
                 "vetica photo booth gentrify.",
-        inCart: true,
+        inCart: false,
         count: 0,
         total: 0
     }, {

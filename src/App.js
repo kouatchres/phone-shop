@@ -1,13 +1,13 @@
 import React from 'react';
-import {Switch,Route} from 'react-router-dom'
+import {Switch,Route} from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar'
-import ProductList from './components/ProductList'
-import Product from './components/Product'
-import ProductDetails from './components/ProductDetails'
-import Cart from './components/Cart'
+import Navbar from './components/Navbar';
+import ProductList from './components/ProductList';
+import Product from './components/Product';
+import ProductDetails from './components/ProductDetails';
+import Cart from './components/cart/Cart';
 import PageNotFound from './components/PageNotFound';
-
+import ProductModal from './components/ProductModal';
 
 function App() {
     return ( 
@@ -20,8 +20,10 @@ function App() {
       <Route exact path='/cart' component={Cart}/>
       <Route  component={PageNotFound}/>
     </Switch>
+    <ProductModal />
     </>
       );
 }
 
 export default App;
+  
